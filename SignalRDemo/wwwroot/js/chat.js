@@ -17,8 +17,8 @@
     });
 
 document.querySelector("#sendButton").addEventListener("click", function (e) {
-        var user = document.getElementById("userInput").value;
-        var message = document.getElementById("messageInput").value;
+    var user = document.querySelector("#userInput").value;
+    var message = document.querySelector("#messageInput").value;
         connection.invoke("SendMessage", user, message).catch(function (err) {
             return console.error(err.toString());
         });
